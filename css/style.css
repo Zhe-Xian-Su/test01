@@ -796,10 +796,10 @@ responsive area
 
 @media (max-width: 479px) {
     .top-header img.logo {
-        margin: 5px 10px;
+        margin: 0px 10px;
     }
     .header-logo {
-        margin-top: 5px !important;
+        margin-top: 0px !important;
     }
     .navbar-default .navbar-toggle {
         border-color: #fff;
