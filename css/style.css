@@ -802,7 +802,7 @@ responsive area
         margin-top: 10px !important;
     }
     .navbar-default .navbar-toggle {
-        border-color: rgb(185, 91, 91);
+        border-color: #fff;
         margin-top: -7px;
         right: 10%;
     }
@@ -837,7 +837,7 @@ responsive area
     }
     .about h2 {
         font-size: 50px;
-        color: #f7cb07;
+        color: #2ddb61;
         margin-top: 30px;
     }
     .service h2 {
