@@ -13,7 +13,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'BenchNine', sans-serif;
+    font-family: 'Time New Roman', sans-serif;
 }
 li {
     list-style: none;
@@ -83,7 +83,6 @@ ul.nav {
     -o-transition: all .7s ease 0s;
     -ms-transition: all .7s ease 0s;
     padding: 14px 13px;
-    font-family:Time New Roman;
     font-weight: bold;
 }
 .navbar-default .navbar-nav>li>a:hover {
