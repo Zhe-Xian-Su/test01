@@ -188,7 +188,7 @@ li a.active {
 /*about area*/
 
 .about h2 {
-    font-size: 90px;
+    font-size: 70px;
     color: #f7cb07;
     margin-top: 50px;
 }
@@ -264,7 +264,7 @@ li a.active {
 .about-details p {
     font-size: 13px;
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Times New Roman', 微軟正黑體 , sans-serif;
     padding: 0 25px;
     padding-bottom: 30px;
 }
@@ -283,7 +283,7 @@ li a.active {
     margin-top: 40px;
 }
 .service h2 {
-    font-size: 90px;
+    font-size: 70px;
     color: #fff;
     margin-top: 70px;
     margin-bottom: 0;
@@ -478,7 +478,7 @@ li a.active {
 }
 .contact-heading h2 {
     color: #fff;
-    font-size: 90px;
+    font-size: 70px;
 }
 .contact-info {
     padding-left: 40px;
