@@ -679,7 +679,7 @@ responsive area
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .navbar-default .navbar-nav>li>a {
-        font-size: 15px;
+        font-size: 10px;
         padding: 14px 12px;
     }
     .carousel-caption h1 {
