@@ -802,7 +802,7 @@ responsive area
         margin-top: 10px !important;
     }
     .navbar-default .navbar-toggle {
-        border-color: #fff;
+        border-color: rgb(185, 91, 91);
         margin-top: -7px;
         right: 10%;
     }
