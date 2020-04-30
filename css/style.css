@@ -188,7 +188,7 @@ li a.active {
 /*about area*/
 
 .about h2 {
-    font-size: 70px;
+    font-size: 60px;
     color: #f7cb07;
     margin-top: 50px;
 }
@@ -388,7 +388,7 @@ li a.active {
     padding-bottom: 60px;
 }
 .team h2 {
-    font-size: 90px;
+    font-size: 60px;
     color: #f7cb07;
     margin-top: 50px;
     margin-bottom: 0;
@@ -453,7 +453,7 @@ li a.active {
     -ms-transition: all .7s ease 0s;
 }
 .person-detail h3 {
-    font-size: 30px;
+    font-size: 22px;
     color: #fff;
 }
 .person-detail p {
@@ -478,7 +478,7 @@ li a.active {
 }
 .contact-heading h2 {
     color: #fff;
-    font-size: 70px;
+    font-size: 60px;
 }
 .contact-info {
     padding-left: 40px;
