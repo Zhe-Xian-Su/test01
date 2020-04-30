@@ -82,7 +82,7 @@ ul.nav {
     -moz-transition: all .7s ease 0s;
     -o-transition: all .7s ease 0s;
     -ms-transition: all .7s ease 0s;
-    padding: 5px 13px;
+    padding: 14px 13px;
     font-weight: bold;
 }
 .navbar-default .navbar-nav>li>a:hover {
@@ -111,13 +111,13 @@ li a.active {
     background: #000 !important;
 }
 .carousel-caption h1 {
-    font-size: 157px;
+    font-size: 100px;
     color: #fff;
     text-transform: uppercase;
     margin-bottom: 0;
 }
 .carousel-caption p {
-    font-size: 40px;
+    font-size: 30px;
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
