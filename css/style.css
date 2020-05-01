@@ -297,6 +297,7 @@ li a.active {
     font-family: 'Times New Roman', 微軟正黑體 , sans-serif;
     padding: 0 25px;
     padding-bottom: 30px;
+    text-align:left;
 }
 .single-about-detail:hover .about-details {
     background: #772d02;
