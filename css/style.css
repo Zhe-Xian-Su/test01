@@ -217,15 +217,15 @@ li a.active {
     width: 50px;
     top: -6%;
 }
-.pentagon-text {
+.pentagon-text1 {
     width: 70px;
     height: 52px;
     background: #fff;
     position: relative;
-    top: -30px;
+    top: -50px;
     left: 5%;
 }
-.pentagon-text:before {
+.pentagon-text1:before {
     content: "";
     position: absolute;
     top: -15px;
@@ -236,7 +236,37 @@ li a.active {
     border-right: 35px solid transparent;
     border-bottom: 15px solid #fff;
 }
-.pentagon-text:after {
+.pentagon-text1:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 0;
+    height: 0px;
+    border-left: 36px solid transparent;
+    border-right: 34px solid transparent;
+    border-top: 15px solid #fff;
+}
+.pentagon-text2 {
+    width: 70px;
+    height: 52px;
+    background: #fff;
+    position: relative;
+    top: -60px;
+    left: 365%;
+}
+.pentagon-text2:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 34px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom: 15px solid #fff;
+}
+.pentagon-text2:after {
     content: "";
     position: absolute;
     bottom: -15px;
@@ -271,7 +301,7 @@ li a.active {
 .single-about-detail:hover .about-details {
     background: #772d02;
 }
-.single-about-detail:hover .pentagon-text h1 {
+.single-about-detail:hover .pentagon-text1 h1 {
     color: #772d02;
 }
 
