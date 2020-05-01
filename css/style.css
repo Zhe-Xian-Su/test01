@@ -138,7 +138,7 @@ li a.active {
     -ms-transition: all .5s ease 0s;
 }
 .carousel-caption button:hover {
-    background: #2a2a2a;
+    background: #490303;
 }
 .carousel-control {
     width: 5%;
@@ -248,7 +248,7 @@ li a.active {
     border-top: 15px solid #fff;
 }
 .about-details {
-    background: #2a2a2a;
+    background: #f7cb07;
     border-top: 2px solid #fff;
     transition: all .7s ease 0s;
     -webkit-transition: all .7s ease 0s;
@@ -269,10 +269,10 @@ li a.active {
     padding-bottom: 30px;
 }
 .single-about-detail:hover .about-details {
-    background: #f7cb07;
+    background: #772d02;
 }
 .single-about-detail:hover .pentagon-text h1 {
-    color: #f7cb07;
+    color: #772d02;
 }
 
 /*service area*/
@@ -284,7 +284,7 @@ li a.active {
 }
 .service h2 {
     font-size: 60px;
-    color: #fff;
+    color: #772d02;
     margin-top: 70px;
     margin-bottom: 0;
 }
@@ -462,13 +462,13 @@ li a.active {
     font-family: 'Times New Roman', 微軟正黑體 , sans-serif;
 }
 .single-member:hover .person-detail {
-    background: #2a2a2a;
+    background: #772d02;
 }
 .single-member:hover .arrow-top {
-    background: #2a2a2a;
+    background: #772d02;
 }
 .single-member:hover .arrow-bottom {
-    background: #2a2a2a;
+    background: #772d02;
 }
 
 /*contact section*/
@@ -477,7 +477,7 @@ li a.active {
     background: #f7cb07;
 }
 .contact-heading h2 {
-    color: #fff;
+    color: #772d02;
     font-size: 60px;
 }
 .contact-info {
@@ -555,7 +555,7 @@ li a.active {
     float: right;
     font-size: 24px;
     color: #fff;
-    background: url(../img/btn-bg.jpg);
+    background: #772d02;
     background-repeat: no-repeat;
     padding: 0;
     font-family: 'Times New Roman', 微軟正黑體 , sans-serif;
