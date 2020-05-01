@@ -814,7 +814,7 @@ responsive area
         height: 80px;
     }
     .carousel-caption {
-        margin-top: 60px;
+        margin-top: -60px;
     }
     .carousel-caption h1 {
         font-size: 20px;
@@ -824,7 +824,7 @@ responsive area
     }
     .carousel-caption button {
         width: 90px;
-        height: 23px;
+        height: 15px;
         font-size: 10px;
     }
     .carousel-control .glyphicon-chevron-right,
