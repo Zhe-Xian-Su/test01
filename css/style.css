@@ -56,7 +56,7 @@ h2 {
     background-color: transparent;
     border-color: transparent;
     margin-bottom: 0;
-    margin-top: 8px;
+    margin-top: 0px;
     transition: all .5s ease 0s;
     -webkit-transition: all .5s ease 0s;
     -moz-transition: all .5s ease 0s;
@@ -64,7 +64,7 @@ h2 {
     -ms-transition: all .5s ease 0s;
 }
 .nav-bar {
-    margin-top: 32px;
+    margin-top: 35px;
 }
 .navbar-toggle span {
     color: #fff;
