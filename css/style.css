@@ -138,7 +138,7 @@ li a.active {
     -ms-transition: all .5s ease 0s;
 }
 .carousel-caption button:hover {
-    background: #490303;
+    background: #772d02;
 }
 .carousel-control {
     width: 5%;
@@ -213,7 +213,7 @@ li a.active {
     -o-transition: all .7s ease 0s;
     -ms-transition: all .7s ease 0s;
     position: absolute;
-    left: 15%;
+    left: 12%;
     width: 50px;
     top: -6%;
 }
