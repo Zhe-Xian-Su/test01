@@ -143,16 +143,9 @@ li a.active {
 .carousel-control {
     width: 5%;
 }
-.carousel-inner {
-    background: -webkit-linear-gradient(left, #000, blue);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(left, #000, blue);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(left, #000, blue);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to left, #000, blue);
-    /* Standard syntax */
-}
+
+
+
 .item {
     position: relative;
 }
@@ -279,6 +272,15 @@ li a.active {
 }
 .about-details {
     background: #f7cb07;
+    border-top: 2px solid #fff;
+    transition: all .7s ease 0s;
+    -webkit-transition: all .7s ease 0s;
+    -moz-transition: all .7s ease 0s;
+    -o-transition: all .7s ease 0s;
+    -ms-transition: all .7s ease 0s;
+}
+.about-details1 {
+    background: #fff;
     border-top: 2px solid #fff;
     transition: all .7s ease 0s;
     -webkit-transition: all .7s ease 0s;
