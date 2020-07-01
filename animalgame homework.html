@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://unpkg.com/konva@4.2.2/konva.min.js"></script>
+  <meta charset="utf-8" />
+  <title>Konva Animals on the Beach Game Demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #575151;
+      position: absolute;
+      top: 15%;
+      left: 23%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container"></div>
+  <audio id="pass1">
+    <source src="img/homework/pass1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="pass4">
+    <source src="img/homework/pass4.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script>
+    var bkimage = "school"
+    var animals = ["monkey", "lion", "giraffe", "snake", "cow"]
+    var paths = {
+      monkey: { sx: 775, sy: 0, ex: 275, ey: 213 },
+      lion: { sx: 775, sy: 0, ex: 71, ey: 165 },
+      giraffe: { sx: 775, sy: 0, ex: 572, ey: 179 },
+      snake: { sx: 775, sy: 0, ex: 695, ey: 165 },
+      cow: { sx: 800, sy: 0, ex: 409, ey: 187 },
+    }
+    var loadedImages = 0;
+
+    loadImages(bkimage, animals, initStage)
+
+    function loadImages(bgimg, fgimgs, callback) {
+      var assetDir = 'img/homework/';
+      var variants = ["", "_black", "_glow"];
+      var images = {};
+      var sources = [bgimg]
+      for (var i = 0; i < fgimgs.length; i++) {
+        for (var j = 0; j < variants.length; j++) {
+          sources.push(fgimgs[i] + variants[j])
+        }
+      }
+      var numImages = sources.length;
+      for (var i = 0; i < sources.length; i++) {
+        var src = sources[i]
+        images[src] = new Image();
+        images[src].src = assetDir + src + ".png";
+        images[src].onload = function () {
+          if (++loadedImages >= numImages) {
+            callback(images);
+          }
+        };
+      }
+    }
+
+    function drawBackground(background, bgImg, text) {
+      var context = background.getContext();
+      context.drawImage(bgImg, 0, 0);
+      context.setAttr('font', '20pt 標楷體');
+      context.setAttr('textAlign', 'center');
+      context.setAttr('fillStyle', 'blue');
+      context.fillText(text, background.getStage().width() / 2, 90);
+    }
+
+    function isNearOutline(animal, ex, ey) {
+      var a = animal;
+      var ax = a.x();
+      var ay = a.y();
+
+      if (ax > ex - 10 && ax < ex + 10 && ay > ey - 10 && ay < ey + 10) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function initStage(images) {
+      var score = 0;
+      var stage = new Konva.Stage({
+        container: 'container',
+        width: 1000,
+        height: 666
+      });
+      var background = new Konva.Layer();
+      var animalLayer = new Konva.Layer();
+
+      for (var key in paths) { // key = monkey, lion, ...
+        var setAnimal = function () {
+          var animal = new Konva.Image({
+            image: images[key],
+            x: paths[key].sx,
+            y: paths[key].sy,
+            draggable: true
+          });
+          var privKey = key
+          // make animal glow on mouseover
+          animal.on('mouseover', function () {
+            animal.image(images[privKey + '_glow']);
+            animalLayer.draw();
+            document.body.style.cursor = 'pointer';
+          });
+          // return animal on mouseout
+          animal.on('mouseout', function () {
+            animal.image(images[privKey]);
+            animalLayer.draw();
+            document.body.style.cursor = 'default';
+          });
+          animal.on('dragstart', function () {
+            this.moveToTop();
+            animalLayer.draw();
+          });
+          animal.on('dragmove', function () {
+            document.body.style.cursor = 'pointer';
+          });
+          /*
+           * check if animal is in the right spot and
+           * snap into place if it is
+           */
+          animal.on('dragend', function () {
+            var home = paths[privKey]
+            if (!animal.inRightPlace && isNearOutline(animal, home.ex, home.ey)) {
+              animal.position({
+                x: home.ex,
+                y: home.ey
+              });
+              animalLayer.draw();
+              animal.inRightPlace = true;
+
+              if (++score >= 5) {
+                var x = document.getElementById("pass4");
+                x.play();
+                drawBackground(
+                background,
+                images[bkimage],
+                '非常好 ! 恭喜你畢業了 !'
+                );
+              } else {
+                var x = document.getElementById("pass1");
+                x.play();
+              }
+
+              // disable drag and drop
+              setTimeout(function () {
+                animal.draggable(false);
+              }, 50);
+            }
+          });
+          animalLayer.add(animal);
+        }
+        setAnimal()
+
+        var setAnimalHome = function () {
+          var animal = new Konva.Image({
+            image: images[key + "_black"],
+            x: paths[key].ex,
+            y: paths[key].ey,
+          });
+          animalLayer.add(animal);
+        }
+        setAnimalHome()
+      }
+
+      stage.add(background);
+      stage.add(animalLayer);
+
+      drawBackground(
+        background,
+        images[bkimage],
+        '快 ! 完成畢業前最後一項作業 !'
+      );
+    }
+
+  </script>
+</body>
+
+</html>
